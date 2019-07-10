@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "11a151a9-481c-44fd-a49a-8b89308750e0",
+		"name": "kfacil-sic",
+		"description": "GRUD para cadastro de cliente (Inclusão, Alteração, Exclusão e Consulta)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET - Consulta lista de Cliente - Sucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3bb881ca-8606-49a2-9d5d-41836942ec34",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente"
+					]
+				},
+				"description": "http://localhost:8080/api/cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Consulta Cliente  - Sucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3bb881ca-8606-49a2-9d5d-41836942ec34",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cliente/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente",
+						"2"
+					]
+				},
+				"description": "http://localhost:8080/api/cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Alteração do Cliente  - Sucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3bb881ca-8606-49a2-9d5d-41836942ec34",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"nome\": \"Ana Paula Buffo\",\n\t\"cpf\": \"229.979.348.85\",\n\t\"endereco\":\"Rua 2\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente"
+					]
+				},
+				"description": "http://localhost:8080/api/cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "DEL - Exclusão do Cliente  - Sucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3bb881ca-8606-49a2-9d5d-41836942ec34",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cliente/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente",
+						"3"
+					]
+				},
+				"description": "http://localhost:8080/api/cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Inclusão de Cliente - Sucesso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5073fd02-0cf2-4cc3-99ba-fee20fd982cd",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () { pm.response.to.have.status(200); });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":3,\n\t\"nome\": \"João\",\n\t\"cpf\": \"867.685.588-97\",\n\t\"endereco\":\"Rua 3\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cliente",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cliente"
+					]
+				},
+				"description": "http://localhost:8080/api/cliente"
+			},
+			"response": []
+		}
+	]
+}
